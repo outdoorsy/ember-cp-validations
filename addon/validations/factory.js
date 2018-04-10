@@ -1,4 +1,3 @@
-import Ember from 'ember';
 import Mixin from '@ember/object/mixin';
 import { Promise } from 'rsvp';
 import EmberObject, { getWithDefault, computed, set, get } from '@ember/object';
@@ -142,8 +141,9 @@ export default function buildValidations(validations = {}, globalOptions = {}) {
     }
   });
 
+  // TODO: removed ember inspector code for now
   // Label mixin under a named scope for Ember Inspector
-  ValidationsMixin[Ember.NAME_KEY] = 'Validations';
+  // ValidationsMixin[Ember.NAME_KEY] = 'Validations';
 
   return ValidationsMixin;
 }
